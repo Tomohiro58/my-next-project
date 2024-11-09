@@ -58,7 +58,7 @@ body{
   Arial,
   "メイリオ", 
   Meiryo,
-  sans-serif,
+  sans-serif;
   color: var(--color-bg-main);
   line-height: 1.8;
 }
