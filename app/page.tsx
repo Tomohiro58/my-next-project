@@ -58,7 +58,7 @@ export default function Home(){
     <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
         <ul>
-          {data.contents.map((article) => (
+          {sliceData.map((article) => (
             <li key={article.id} className={styles.list}>
               <div className ={styles.link}>
                 <Image
@@ -69,7 +69,9 @@ export default function Home(){
                  height={630}
                 />
                 <dl className={styles.content}>
-                  <dt className={styles.newsItemTitle}> </dt>
+                  <dt className={styles.newsItemTitle}>
+                    {article.title}
+                  </dt>
                     <dd className={styles.meta}>
                       <span className={styles.tag}></span>
                       <span className={styles.date}>
