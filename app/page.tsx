@@ -37,6 +37,7 @@ const data:{
 };
     
 export default function Home(){
+  const sliceData = data.contents.slice(0, 2);
   // JavaScriptの定数や式などを書くことができる
   return (
     <>
