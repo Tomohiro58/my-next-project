@@ -1,5 +1,7 @@
 import styles from "./page.module.css";
-import Image from "next/image"
+import Image from "next/image";
+
+import ButtonLink from "@/app/_components/ButtonLink";
 
 type News ={
   id: string;
@@ -43,8 +45,8 @@ export default function Home(){
     <>
     <section className={styles.top}>
       <div>
-       <h1 className="styles.title">テクノロジーの力で世界を変える</h1>
-       <p className="styles.description">
+       <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+       <p className={styles.description}>
       私たちは市場をリードしているグローバルカンパニーです。</p>
       </div>
     <Image
@@ -90,6 +92,9 @@ export default function Home(){
             </li>
           ))}
         </ul>
+        <div className={styles.newsLink}>
+          <ButtonLink href="/news">もっと見る</ButtonLink>
+        </div>
       </section>
     </>
   );
