@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css"
+import styles from "./page.module.css";
 
 const data = {
     contents:[
@@ -17,7 +17,7 @@ const data = {
         },
         {
             id: "2",
-            mage:{
+            image:{
                 url: "/img-member2.jpg",
                 width: 240,
                 height: 240,
@@ -29,7 +29,7 @@ const data = {
         },
         {
             id: "3",
-            mage:{
+            image:{
                 url: "/img-member3.jpg",
                 width: 240,
                 height: 240,
@@ -46,7 +46,7 @@ export default function Page(){
     return(
         <div className={styles.container}>
             {data.contents.length === 0 ? (
-                <p className={styles.empty}>メンバーが登録されていません</p>
+                <p className={styles.empty}>メンバーが登録されていません。</p>
             ) : (
                 <ul>
                     {data.contents.map((member) => (
