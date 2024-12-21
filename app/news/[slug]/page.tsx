@@ -1,4 +1,4 @@
-
+import { getNewsDetail } from "@/app/_libs/microcms";
 
 type Props = {
     params: {
@@ -6,7 +6,9 @@ type Props = {
     };
 };
 
-export default async function Page(props: Props) {
+export default async function Page({ params }: Props) {
+    console.log(params.slug);
+    const data = await getNewsDetail(params.slug);
 
-    return <div>{JSON.stringify(props)}</div>;
+    return <div>{data.title}</div>;
 }
