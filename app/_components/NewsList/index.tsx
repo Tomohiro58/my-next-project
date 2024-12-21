@@ -39,6 +39,7 @@ type Props = {
                         <dl className={styles.content}>
                             <dt className={styles.title}>{article.title}</dt>
                             <dd className={styles.meta}>
+
                                 <Category category={article.category} />
                                 <Date date={article.publishedAt ?? article.createdAt} />
                             </dd>
