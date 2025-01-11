@@ -9,11 +9,11 @@ type Props = {
       slug: string;
     };
     searchParams:{
-      dk? : string;
+      dk?: string;
     };
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params,searchParams }: Props) {
     console.log(params.slug);
     const data = await getNewsDetail(params.slug,{
     draftKey: searchParams.dk,
