@@ -70,3 +70,16 @@ if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   
     return detailData;
   };
+
+  export const getCategoryDetail = async (
+    contentId: string,
+    queries?: MicroCMSQueries
+  ) => {
+    const detailData = await client.getListDetail<Category>({
+      endpoint: 'categories',
+      contentId,
+      queries,
+    });
+  
+    return detailData;
+  };
